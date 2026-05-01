@@ -3,5 +3,4 @@ services:
     build: .
     volumes:
       - .:/app
-    # Konteynerın root yetkisiyle yazabilmesi gerekebiliyor bazı sistemlerde
     user: "root"

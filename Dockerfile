@@ -1,16 +1,15 @@
-# 1. Hafif bir Python imajı kullan
+# 1. a lightweight Python image.
 FROM python:3.11-slim
 
-# 2. Çalışma dizinini ayarla
+# 2. Set the working directory
 WORKDIR /app
 
-# 3. Kütüphaneleri kur
+# 3. Set up libraries
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# 4. Tüm proje dosyalarını içeri kopyala
+# 4. Copy all project files inside.
 COPY . .
 
-# 5. OTOMASYON: Önce veriyi üret, sonra ETL'i çalıştır
-# Bu komut "docker run" dendiği an her şeyi sırayla yapar
+# 5. AUTOMATION: First generate the data, then run the ETL
 CMD ["sh", "-c", "python src/generate_data.py && python src/etl_process.py"]

@@ -16,18 +16,18 @@ def download_real_data():
         os.makedirs(data_dir)
 
     if os.path.exists(file_path):
-        print(f"--- Veri zaten mevcut: {file_path} ---")
+        print(f"--- The data is already available: {file_path} ---")
         return
 
-    print(f"--- Gerçek NYC Taksi Verisi İndiriliyor (~50MB) ---")
+    print(f"--- Downloading real NYC Taxi data (~50MB) ---")
     print(f"URL: {URL}")
 
     try:
-        # Veriyi indir
+        # download the data
         urllib.request.urlretrieve(URL, file_path)
-        print(f"--- İndirme Tamamlandı: {file_path} ---")
+        print(f"--- Download complete: {file_path} ---")
     except Exception as e:
-        print(f"HATA: Veri indirilemedi: {e}")
+        print(f"ERROR: Data could not be downloaded: {e}")
 
 
 if __name__ == "__main__":
