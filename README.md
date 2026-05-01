@@ -23,11 +23,15 @@ git clone https://github.com/itu-itis23-solmaz22/duckdb-etl-demo.git
 2. **Navigate into the project folder**
 cd duckdb-etl-demo
 
+<img width="1478" height="754" alt="installation" src="https://github.com/user-attachments/assets/a06480bf-bccc-4f29-80d0-26a0b68e73f0" />
+
 ---
 
 ## 🚀 Running the Example
 You can execute the entire pipeline (automatic data download + SQL analysis) using Docker or local Python.
 (Before proceeding, ensure that Docker Desktop is open and the engine is running.)
+<img width="1590" height="747" alt="engine_running" src="https://github.com/user-attachments/assets/9d901ce0-569b-4c9e-93ac-e46e8f1884af" />
+
 
 ### Option A: Using Docker
 This command builds the environment and runs the ETL pipeline automatically:
@@ -46,18 +50,12 @@ python src/etl_process.py
 ## 📊 Expected Output
 When the pipeline runs successfully, you should see an output similar to the following in your terminal:
 
-duckdb-presentation-1 | --- Downloading Real NYC Taxi Data (~50MB) ---
-duckdb-presentation-1 | URL: https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2024-01.parquet 
-duckdb-presentation-1 | --- Download Complete ---
-duckdb-presentation-1 | 
-duckdb-presentation-1 | --- Starting Real Data Analysis ---
-duckdb-presentation-1 | Analysis Time: 1.3281 seconds
-duckdb-presentation-1 | 
-duckdb-presentation-1 | --- January 2024 First 10 Days Analysis ---
-duckdb-presentation-1 |   trip_date  trip_count  avg_tip  avg_fare
-duckdb-presentation-1 | 0 2024-01-01      81013     3.26     21.79
-duckdb-presentation-1 | 1 2024-01-02      75519     3.52     20.97
-duckdb-presentation-1 | 2 2024-01-03      82427     3.37     19.66
+<img width="1478" height="763" alt="part1" src="https://github.com/user-attachments/assets/fa680314-9ba6-4328-9181-81e5fa1c6ca3" />
+
+<img width="1479" height="761" alt="part2" src="https://github.com/user-attachments/assets/fd6a6737-798f-48d5-b3aa-f929f9793bfe" />
+
+<img width="1479" height="760" alt="part3" src="https://github.com/user-attachments/assets/d6bb0f7d-bf80-4309-943f-f53331c90b81" />
+
 
 ---
 
