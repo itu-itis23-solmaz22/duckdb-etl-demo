@@ -1,7 +1,7 @@
 import os
 import urllib.request
 
-# Yollar: src -> .. -> data
+# paths
 current_dir = os.path.dirname(os.path.abspath(__file__))
 data_dir = os.path.abspath(os.path.join(current_dir, "..", "data"))
 file_name = "yellow_tripdata_2024-01.parquet"
