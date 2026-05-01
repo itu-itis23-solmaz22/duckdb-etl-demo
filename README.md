@@ -31,10 +31,12 @@ You can execute the entire pipeline (automatic data download + SQL analysis) usi
 
 ### Option A: Using Docker
 This command builds the environment and runs the ETL pipeline automatically:
+
 docker-compose up --build
 
 ### Option B: Using Local Python
 If you prefer to run it manually:
+
 pip install -r requirements.txt
 python src/generate_data.py
 python src/etl_process.py
